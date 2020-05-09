@@ -1,3 +1,23 @@
-<p>
-  live-list works!
-</p>
+<div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="flex-center" *ngIf="selected === 'card'" style="padding: 2%">
+  <ng-container *ngFor="let live of lives" style="margin: 0%;">
+    
+    <mat-card class="mat-card-order" fxFlex="0 1 calc(33.3% - 11px)"
+    fxFlex.lt-md="0 1 calc(50% - 11px)"
+    fxFlex.lt-sm="100%" style="border: 1px solid #CFD8DC; border-radius: 4px 3px 6px / 2px 4px; padding: 0px !important;">
+
+      <mat-card-title style="padding-left:20px; padding-top: 0px; padding-right: 15px; margin-bottom: 0px; min-height: 101px;">
+      </mat-card-title>
+
+      <mat-divider style="padding: 0% !important;"></mat-divider> 
+
+      <mat-card-content fxLayoutAlign="center center" class="mat-card-content-qualifications">
+        
+
+      </mat-card-content>
+
+      <mat-card-actions style="margin:1px;padding-bottom:5px; padding-top: 5px;">
+
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>
+  </div>
