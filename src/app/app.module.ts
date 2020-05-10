@@ -7,7 +7,8 @@ import { HomeComponent } from './views/home/home.component';
 import { LiveListComponent } from './views/home/live-list/live-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatCardModule, MatDividerModule} from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatCardModule, MatDividerModule, MatChipsModule, MatToolbarModule, MatIconModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,11 @@ import {MatCardModule, MatDividerModule} from '@angular/material';
     HttpClientModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatDividerModule
+    MatDividerModule,
+    MatChipsModule,
+    MatToolbarModule,
+    MatIconModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
