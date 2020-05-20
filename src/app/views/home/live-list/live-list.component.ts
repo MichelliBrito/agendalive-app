@@ -23,9 +23,12 @@ export class LiveListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-   this.rest.getLivesWithFlag('next').subscribe(data => {
+   this.getLives();
+  }
+
+  getLives(){
+    this.rest.getLivesWithFlag('next').subscribe(data => {
       this.livesNext = data.content;
-      console.log(this.livesNext);
       this.livesNext.forEach(live => {
         live.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(live.liveLink);
       });

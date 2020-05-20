@@ -1,0 +1,30 @@
+<h1 mat-dialog-title>Nova Live</h1>
+<div mat-dialog-content>
+    <form class="example-form" [formGroup]="liveForm">
+        <mat-form-field class="example-full-width">
+            <mat-label>Nome da Live</mat-label>
+            <input matInput placeholder="" formControlName="liveName" name="liveName">
+        </mat-form-field>
+      
+        <mat-form-field class="example-full-width">
+            <mat-label>Nome do Canal</mat-label>
+            <input matInput placeholder="" formControlName="channelName" name="channelName">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Link Completo</mat-label>
+            <input matInput placeholder="" formControlName="liveLink" name="liveLink">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Data da Live</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="liveDate">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="cancel()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="createLive()">Adicionar</button>
+</div>
