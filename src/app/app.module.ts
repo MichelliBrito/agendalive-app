@@ -13,12 +13,15 @@ import {MatDividerModule } from '@angular/material/divider';
 import {MatChipsModule } from '@angular/material/chips';
 import {MatToolbarModule } from '@angular/material/toolbar';
 import {MatIconModule } from '@angular/material/icon';
+import {MatTabsModule } from '@angular/material/tabs';
+import { LocalDateTimePipe } from './shared/pipe/local-date-time.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LiveListComponent
+    LiveListComponent,
+    LocalDateTimePipe
   ],
   imports: [
     BrowserModule,
@@ -30,9 +33,12 @@ import {MatIconModule } from '@angular/material/icon';
     MatChipsModule,
     MatToolbarModule,
     MatIconModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatTabsModule
   ],
-  providers: [],
+  providers: [
+    LocalDateTimePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
