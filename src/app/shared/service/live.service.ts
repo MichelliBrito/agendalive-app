@@ -17,8 +17,8 @@ export class LiveService {
         return this.httpClient.get<ResponsePageable>(this.apiUrl);
     }
 
-    public getLivesWithDate(date: string): Observable<ResponsePageable> {
-        return this.httpClient.get<ResponsePageable>(this.apiUrl + '?date=' + date);
+    public getLivesWithFlag(flag: string): Observable<ResponsePageable> {
+        return this.httpClient.get<ResponsePageable>(this.apiUrl + '?flag=' + flag);
     }
 
 }

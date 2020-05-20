@@ -11,9 +11,8 @@ import * as moment from 'moment';
 })
 export class LiveListComponent implements OnInit {
 
-  lives: Live[];
-  livesToday: Live[];
-  livesTomorrow: Live[];
+  livesNext: Live[];
+  livesPrevious: Live[];
   url: string = '';
   urlSafe: SafeResourceUrl;
 
@@ -24,25 +23,16 @@ export class LiveListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    let newDateToday: moment.Moment = moment.utc(new Date()).local();
-    let newDateTodayStr = newDateToday.utcOffset("-03:00").format('YYYY-MM-DD');
-   this.rest.getLivesWithDate(newDateTodayStr).subscribe(data => {
-      this.livesToday = data.content;
-      this.livesToday.forEach(live => {
+   this.rest.getLivesWithFlag('next').subscribe(data => {
+      this.livesNext = data.content;
+      this.livesNext.forEach(live => {
         live.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(live.liveLink);
       });
     });
-    let newDateTomorrow: moment.Moment = moment.utc(new Date()).local().add(1, 'days');
-    let newDateTomorrowStr = newDateTomorrow.utcOffset("-03:00").format('YYYY-MM-DD');
-    this.rest.getLivesWithDate(newDateTomorrowStr).subscribe(data => {
-      this.livesTomorrow = data.content;
-      this.livesTomorrow.forEach(live => {
-        live.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(live.liveLink);
-      });
-    });
-    this.rest.getLives().subscribe(data => {
-      this.lives = data.content;
-      this.lives.forEach(live => {
+
+    this.rest.getLivesWithFlag('previous').subscribe(data => {
+      this.livesPrevious = data.content;
+      this.livesPrevious.forEach(live => {
         live.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(live.liveLink);
       });
     });
