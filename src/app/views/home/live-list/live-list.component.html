@@ -1,6 +1,6 @@
 <mat-tab-group style="padding-top: 40px; padding-left: 2%; padding-right: 2%;">
   <mat-tab label="PRÓXIMAS">
-    <div fxLayout="row wrap" fxLayoutAlign="flex-center" fxLayout.lt-sm="column" style="padding: 2%">
+    <div fxLayout="row wrap" f1q  xLayoutAlign="start center" style="padding: 2%">
       <!-- <div fxFlex="100" style="margin-left: 0.5%; font-weight: bold;">PRÓXIMAS</div> -->
       <div *ngFor="let live of livesNext" style="margin: 0.5%;">
         
@@ -33,9 +33,9 @@
   </mat-tab>
 
   <mat-tab label="REALIZADAS">
-    <div fxLayout="row wrap" fxLayoutAlign="flex-center" fxLayout.lt-sm="column" style="padding: 2%">
+    <div fxLayout="row wrap" fxLayoutAlign="start center" style="padding: 2%">
       <!-- <div fxFlex="100" style="margin-left: 0.5%; font-weight: bold;">REALIZADAS</div> -->
-      <div *ngFor="let live of livesPrevious" style="margin: 0.5%;">
+      <ng-container *ngFor="let live of livesPrevious" style="margin: 0.5%;">
         
         <mat-card class="mat-card-live" fxFlex="0 1 calc(33.3% - 11px)"
         fxFlex.lt-md="0 1 calc(50% - 11px)"
@@ -61,7 +61,7 @@
           <!-- <mat-card-actions style="margin:1px;padding-bottom:5px; padding-top: 5px;">
           </mat-card-actions> -->
         </mat-card>
-      </div>
+      </ng-container>
     </div>
   </mat-tab>
 </mat-tab-group>
