@@ -18,13 +18,14 @@ export class HomeComponent implements OnInit {
 
   addLive(): void {
     const dialogRef = this.dialog.open(LiveFormDialogComponent, {
-      maxHeight: '95vh',
+      // maxHeight: '95vh',
       minWidth: '400px',
-      width: '25vw',
+      // width: '25vw',
     });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
+      window.location.reload();
     });
   }
 
