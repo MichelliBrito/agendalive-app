@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './views/home/home.component';
-import { LiveListComponent } from './views/home/live-list/live-list.component';
+// import { HomeComponent } from './views/home/home.component';
+// import { LiveListComponent } from './views/home/live-list/live-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -19,17 +19,17 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { LocalDateTimePipe } from './shared/pipe/local-date-time.pipe';
-import { LiveFormDialogComponent } from './views/home/live-form-dialog/live-form-dialog.component';
+// import { LiveFormDialogComponent } from './views/home/live-form-dialog/live-form-dialog.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    LiveListComponent,
-    LocalDateTimePipe,
-    LiveFormDialogComponent
+    // HomeComponent,
+    // LiveListComponent,
+    // LocalDateTimePipe,
+    // LiveFormDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +52,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ],
   providers: [
-    LocalDateTimePipe
+    // LocalDateTimePipe
   ],
   bootstrap: [AppComponent]
 })
