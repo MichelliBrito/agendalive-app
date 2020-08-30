@@ -22,6 +22,7 @@ import { LocalDateTimePipe } from './shared/pipe/local-date-time.pipe';
 import { LiveFormDialogComponent } from './views/home/live-form-dialog/live-form-dialog.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatDatepickerModule,
     MatNativeDateModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatProgressBarModule
   ],
   providers: [
     LocalDateTimePipe
