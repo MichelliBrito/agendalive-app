@@ -23,7 +23,7 @@
     "@angular/platform-browser-dynamic": "9.0.0",
     "@angular/router": "9.0.0",
     "core-js": "2.4.1",
-    "moment": "2.24.0",
+    "moment": "2.29.2",
     "rxjs": "6.5.4",
     "tslib": "^1.11.0",
     "zone.js": "~0.10.2"
