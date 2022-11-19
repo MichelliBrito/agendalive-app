@@ -29,7 +29,7 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.900.1",
+    "@angular-devkit/build-angular": "~15.0.0",
     "@angular-devkit/core": "9.0.1",
     "@angular/cli": "9.0.1",
     "@angular/compiler-cli": "9.0.0",
@@ -38,7 +38,7 @@
     "@types/jasmine": "2.5.38",
     "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
-    "copy-webpack-plugin": "4.3.0",
+    "copy-webpack-plugin": "4.6.0",
     "enhanced-resolve": "3.3.0",
     "jasmine-core": "~2.5.2",
     "jasmine-spec-reporter": "~3.2.0",
